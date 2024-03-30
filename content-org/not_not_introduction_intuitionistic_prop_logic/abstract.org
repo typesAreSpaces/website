@@ -1,0 +1,6 @@
+*** Abstract 
+
+In this paper we motivate the study of Kripke semantics for propositional
+intuitionistic logic by showing fundamental properties at the proof theory level
+using $n+1$-valued logics. Some non-theorems of propositional intuitionistic
+logic (like the excludded middle principle) are discussed using this approach.

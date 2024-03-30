@@ -1,0 +1,159 @@
+\documentclass{article}
+
+\usepackage{symbols}
+
+\input{kldb}
+\makeindex
+\makeglossaries
+
+\begin{document}
+
+\title{Not not Law of Excluded Middle and Glivenko's translation}
+\author{Jose Abel Castellanos Joo\\Department of Computer Science\\University
+of New Mexico\\}
+
+\date{\today}
+\maketitle
+%\tableofcontents
+
+In intuitionistic logic, the intuitionistic negation $\neg A$ is encoded as $A
+\rightarrow \bot$. 
+
+\section{Natural Deduction for Classical Logic}
+
+\begin{definition} The following rules definte Classical Logic:
+
+  \begin{prooftree}
+    \hypo{\varphi}
+    \hypo{\psi}
+    \infer2[Intro-$\land$]{\varphi \land \psi}
+  \end{prooftree}
+
+  \begin{prooftree}
+    \hypo{\varphi \land \psi}
+    \infer1[Elim-$\land$1]{\varphi}
+  \end{prooftree}
+
+  \begin{prooftree}
+    \hypo{\varphi \land \psi}
+    \infer1[Elim-$\land$2]{\psi}
+  \end{prooftree}
+
+  \begin{prooftree}
+    \infer0[a]{\varphi}
+    \ellipsis{}{\psi}
+    \infer1[Intro-$\rightarrow$a]{\varphi \rightarrow \psi}
+  \end{prooftree}
+
+  \begin{prooftree}
+    \hypo{\varphi}
+    \hypo{\varphi \rightarrow \psi}
+    \infer2[Elim-$\rightarrow$]{\psi}
+  \end{prooftree}
+
+  \begin{prooftree}
+    \hypo{\bot}
+    \infer1[$\bot$]{\varphi}
+  \end{prooftree}
+
+  \begin{prooftree}
+    \infer0[a]{\neg \varphi}
+    \ellipsis{}{\bot}
+    \infer1[$RAA$]{\varphi}
+  \end{prooftree}
+
+  \begin{prooftree}
+    \hypo{\varphi}
+    \infer1[Intro-$\lor$1]{\varphi \lor \psi}
+  \end{prooftree}
+
+  \begin{prooftree}
+    \hypo{\psi}
+    \infer1[Intro-$\lor$2]{\varphi \lor \psi}
+  \end{prooftree}
+
+  \begin{prooftree}
+    \hypo{\varphi \lor \psi}
+    \infer0[]{\varphi}
+    \ellipsis{}{\sigma}
+    \infer0[]{\psi}
+    \ellipsis{}{\sigma}
+    \infer3[Elim-$\lor$]{\sigma}
+  \end{prooftree}
+  
+\end{definition}
+
+\section{Natural Deduction for Intuitionistic Logic}
+
+We just drop the rule $RAA$. The rule $RAA$ stands for the `reductio ad
+absurdum' rule. 
+
+\section{Theorems}
+
+\begin{theorem}
+  $\vdash_I A \rightarrow \neg \neg A$
+\end{theorem}
+
+\begin{proof}
+
+  \begin{prooftree}
+    \infer0[1]{A}
+    \infer0[2]{A \rightarrow \bot}
+    \infer2[Elim-$\rightarrow$]{\bot}
+    \infer1[Intro-$\rightarrow$2]{(A \rightarrow \bot) \rightarrow \bot}
+    \infer1[Intro-$\rightarrow$1]{A \rightarrow ((A \rightarrow \bot) \rightarrow \bot)}
+  \end{prooftree}
+  
+\end{proof}
+
+\begin{theorem}
+  $\vdash_I \neg\neg(A \lor \neg A)$
+\end{theorem}
+
+\begin{proof}
+
+  \begin{prooftree}
+    \infer0[1]{A}
+    \infer1[Left intro $\lor$]{A \lor (A \rightarrow \bot)}
+    \infer0[2]{(A \lor (A \rightarrow \bot)) \rightarrow \bot}
+    \infer2[MP]{\bot}
+    \infer1[Intro-1]{A \rightarrow \bot}
+    \infer1[Right intro $\lor$]{A \lor (A \rightarrow \bot)}
+    \infer0[2]{(A \lor (A \rightarrow \bot)) \rightarrow \bot}
+    \infer2[MP]{\bot}
+    \infer1[Intro-2]{((A \lor (A \rightarrow \bot)) \rightarrow \bot)
+      \rightarrow \bot} 
+  \end{prooftree} 
+
+\end{proof}
+
+\begin{theorem}
+  If $\vdash_I \neg \neg A$ and $\vdash_I \neg \neg (A \rightarrow B)$,then
+  $\vdash_I \neg \neg B$ 
+\end{theorem}
+
+\begin{proof}
+
+  \begin{prooftree}
+    \infer0[1]{A}
+    \infer0[2]{A \rightarrow B}
+    \infer2[MP]{B}
+    \infer0[3]{B \rightarrow \bot}
+    \infer2[MP]{\bot}
+    \infer1[Intro-1]{A \rightarrow \bot}
+    \infer0[Hyp]{(A \rightarrow \bot) \rightarrow \bot}
+    \infer2[MP]{\bot}
+    \infer1[2]{(A \rightarrow B) \rightarrow \bot}
+    \infer0[Hyp]{((A \rightarrow B) \rightarrow \bot) \rightarrow \bot}
+    \infer2[MP]{\bot}
+    \infer1[Intro-3]{(B \rightarrow \bot) \rightarrow \bot}
+  \end{prooftree}
+
+\end{proof}
+
+% \bibliographystyle{plain}
+% \bibliography{./../../../references}
+% \printglossaries
+% \printindex
+\end{document}
+

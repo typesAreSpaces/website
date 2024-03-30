@@ -1,0 +1,68 @@
+*** Kripke Semantics for Propositional Intuitionistic Logic
+
+Definition:
+#+begin_definition
+\cite{vanDalen2013}
+A *Kripke model* is a tuple $\mathcal{K} = \langle K, \Sigma \rangle$ such that
+$K$ ia a non-empty partially ordered set, $\Sigma : K \rightarrow 2^{PROP}$ is a function on $K$
+that assigns a collection of propositional
+variables to each element $k$ in $K$ satisfying
+the following:
+
+- $\bot \not \in \Sigma(k)$ for all $k$ in $K$
+- If $k \leq l$ then $\Sigma(k) \subseteq \Sigma(l)$
+#+end_definition
+
+Each element in $K$ can be interpreted as the
+states of the knowlege-subject, which progression
+over time is captured by the partially order
+relation $\leq$ over $K$. Additionally,
+the map $\Sigma$ can be understood as the
+knowledge state of the knowlege-subject
+at each time. The function $\Sigma$ tells us
+which atoms are `true' in each state $k \in K$.
+We can extend $\Sigma$ to all formulas.
+
+Lemma:
+#+begin_lemma
+$\Sigma$ has a unique extension to a function on $K$
+satisfying the following:
+
+1. $\psi \lor \phi \in \Sigma(k)$ if and only if $\psi \in \Sigma(k)$
+or $\phi \in \Sigma(k)$
+2. $\psi \land \phi \in \Sigma(k)$ if and only if $\psi \in \Sigma(k)$
+and $\phi \in \Sigma(k)$
+3. $\psi \rightarrow \phi \in \Sigma(k)$ if and only if for all $l \geq k$ 
+if $\psi \in \Sigma(l)$ then $\phi \in \Sigma(l)$
+#+end_lemma
+
+The negation connective here is abbreviated as $\neg A := A \rightarrow \bot$.
+We write $k \models \phi$ for $\phi \in \Sigma(k)$, pronouncing it as 
+$k$ forces $\phi$.
+
+Lemma:
+#+begin_lemma
+(Monotonicity of $\models$) Let $k, l \in K$ and $\phi \in 
+FORM(\neg, \lor, \land, \rightarrow)$. If $k \leq l$, then $k \models \phi$ implies
+$l \models \phi$
+#+end_lemma
+
+Proof:
+#+begin_proof
+Induction on $\phi$.
+- $\phi$ is atomic: Holds by definition of Kripke structure.
+- $\phi$ is $\phi_1 \lor \phi_2$: Let $k \models \phi_1 \lor \phi_2$
+and $k \leq l$. So $k \models \phi_1 \lor \phi_2$ if and only if
+$k \models \phi_1$ or $k \models \phi_2$. By induction, we have that
+$l \models \phi_1$ or $l \models \phi_2$ so 
+$l \models \phi_1 \lor \phi_2$.
+- $\phi$ is $\phi_1 \land \phi_2$: Similar to the previous case.
+- $\phi$ is $\phi_1 \rightarrow \phi_2$: 
+Let $k \models \phi_1 \rightarrow \phi_2$ and $l \geq k$.
+Suppose $p \geq l$ and $p \models \phi_1$.
+Since $p \geq k$, $p \models \phi_2$. Hence, $l \models \phi_1 \rightarrow \phi_2$.
+#+end_proof
+
+The last lemma captures the idea that knowlege is preserved
+`over time' of the knowlege-subject and as such it can only
+be incremented.

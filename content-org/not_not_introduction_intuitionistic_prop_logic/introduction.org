@@ -1,0 +1,76 @@
+*** Introduction
+
+With the discovery of non-Euclidean geometries
+in the middle of the nineteenth century \cite{Trudeau2001}, 
+mathematicians questioned
+the logical foundations of mathematics.
+In fact, the latter culminated in the 
+fragmentation of the mathematical community 
+resulting in three main schools
+of thought:
+
+**** Platonism:
+The practicioners
+consider the subject at study to be
+independent of the epistemic knowledge
+of mathematical objects 
+and their relations. Instead, these were
+regarded as abstract
+entities which can only be accessed
+through meaningful propositions.
+
+**** Formalism:
+This trend considers
+the linguistic approach an essential
+aspect for the discussion of the mathematical
+theories using axiomatic systems and
+precise rules to understand and communicate
+mathematical truth. Formalism is quite often 
+critized by its opponents to reduce mathematical investigations
+to a simple manipulation of symbols. Regardless
+of this unintended byproduct, formalism's
+main point is to provide a suitable 
+framework to understand the consistency
+of mathematics, a program heavely supported
+by the mathematician David Hilbert at the beginning of 
+the 20th century.
+It was not until logician Kurt G\"odel with his 
+Incompleteness Theorems that showed the limitations
+of this program.
+
+**** Intuitionism:
+This school was initiated
+by the ideas of L.E.J. Brouwer, a Dutch
+mathematician who worked in several
+mathematical subjects ranging from topology
+to foundations of mathematics. 
+He was a critic of the Formalism approach. 
+The crucial missing part was the lack of 
+involvement of the knowledge-subject.
+The thinking activity is of huge
+importance for him. Such activity grounds
+on our \emph{Ur-intuition} of the flow
+of time \cite{https://doi.org/10.1002/sdr.462}.
+Thus, mathematical work accounts to `mental 
+constructions' in the intuitionistic sense.
+
+In this light, an intuitionistic assertion
+constitutes complete knowlege on the subject.
+To say that something is true in the intuitionisc
+sense accounts to having a proof of it. Notice
+that the intention here is radically different
+in the negation. Knowing that something
+is false accounts to having a proof of the 
+impossibility of the fact, contrary to the
+position of not having a proof of it.
+
+A typical example in intuitionistic mathematics
+is to discuss the excludded middle principle 
+$\neg A \lor A$. 
+Such statement \emph{cannot be accepted} 
+intuitioniscally since it contributes more
+to an undecided moment rather 
+than knowledge about the statement.
+In the rest of this paper we will discuss
+axiomatic systems and models which allows
+us to understand intuitionistic ideas.

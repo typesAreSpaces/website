@@ -1,0 +1,62 @@
+*** Basic customization
+
+After cloning your repo into a local machine, your website is ready to be published. You can use the command
+
+#+begin_src bash 
+hugo server -D
+#+end_src
+
+to see a preview of how it would look like.
+
+On the other hand, it can take some time to go through Hugo's documentation to figure out where to make necessary changes to have a personalized website. The following is a list of the places I recommend checking for the latter:
+
+**** menus.yaml:
+
+This file contains configuration information of the menu bar. The `main` entry contains the sections to be included in it with three parameters:
+
+- name: This is the name the menu will display in the menu bar.
+- url: You can specify any website address. Conveniently, this theme allows to user to use '#<widget>' where <widget> can be any section in your content directory.
+- weight: This number specifies the order of apparence for each menu. Assuming each entry has unique weight, entry A appears to the left of entry B if and only if the weght of entry A is smaller than the weight of entry B, i.e. entries with smaller weight appear first to the left.
+
+***** Location
+
+#+begin_src bash 
+$WEBSITE_PATH/config/_default/menus.yaml
+#+end_src
+
+**** params.yaml:
+
+This file contains parameters like the color scheme to be used, google analytics, \(\LaTeX\) support, etc.
+
+***** Location
+
+#+begin_src bash 
+$WEBSITE_PATH/config/_default/params.yaml
+#+end_src
+
+***** Additional settings
+
+I recommend to explore this section to enable/disable any options you might be interested. Nonetheless, I think you should change the footer parameter, especifically the copyright entry which initially contains '... {year} Me ...'. Of course the latter should be changed to your name. 
+
+**** config.yaml:
+
+This file contains important entries like 'title' and 'baseURL'. The information in the 'title' entry will be used as a 'home buttom'. Additionally, make sure to setup your 'baseURL' with a trailing slash before making a deploy with the command
+
+#+begin_src bash 
+hugo
+#+end_src
+
+***** Location
+
+#+begin_src bash 
+$WEBSITE_PATH/config/_default/config.yaml
+#+end_src
+
+***** Additional settings
+
+I'd recommend to set to true the property
+#+begin_src bash 
+canonifyURLS: true
+#+end_src
+
+Otherwise, I noticed the button with the name of the website has a link to the parent directory in your host domain.
