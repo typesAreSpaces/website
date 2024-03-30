@@ -1,0 +1,46 @@
+# Theme metadata
+name = "unm"
+
+[light]
+
+  # Primary
+  primary = "#C10037"
+
+  link = "#C10037"
+  link_hover = "#C10037"
+  link_decoration = "underline"
+
+  # Menu
+  menu_primary = "#2B2622"
+  menu_text = "#FFF9F2"
+  menu_text_active = "#88C0D0"
+  menu_title = "#C10037"
+
+  # Background
+  background = "#FFF9F2"
+
+  # Home sections
+  home_section_odd = "#FFF9F2"
+  home_section_even = "#FFF9F2"
+
+[dark]
+
+  # Primary
+  primary = "#C10037"
+
+  link = "#C10037"
+  link_hover = "#C10037"
+  link_decoration = "underline"
+
+  # Menu
+  menu_primary = "#FFF9F2"
+  menu_text = "#2B2622"
+  menu_text_active = "#5E81AC"
+  menu_title = "#C10037"
+
+  # Background
+  background = "#2B2622"
+
+  # Home sections
+  home_section_odd = "#2B2622"
+  home_section_even = "#2B2622"
