@@ -1,7 +1,7 @@
 USERNAME='jose.castellanosjoo'
 DOMAIN='cs.unm.edu'
 BASE_URL='https:\/\/www.$(DOMAIN)\/~$(USERNAME)\/'
-CURRENT_ICON_PATH=~/Pictures/icon.png
+CURRENT_ICON_PATH=./static/icon.png
 UNAME_S := $(shell uname -s)
 ifeq ($(UNAME_S),Darwin)
 	BROWSER=/Applications/Firefox.app/Contents/MacOS/firefox
