@@ -1,6 +1,6 @@
 *** A formal system $J$ for propositional intuitionistic logic
 
-The following axioms were extract from \cite{hodel2013introduction}:
+The following axioms were extract from [cite:@hodel2013introduction]:
 
 - *Language*: The symbols of the language are:
   - $p_1, p_2, p_3, \dots$: An infinite list of propositional variables
@@ -25,11 +25,11 @@ as $(A \rightarrow B) \land (B \rightarrow A)$. It is important to mention that 
 share similar abbreviations as in the classical counterpart.
 Since $J$ as a formal system contains $J1$ and Modus
 Ponens as unique rule of inference, by the comment on Theorem 3
-in Section 3.5 of \cite{hodel2013introduction} we have that
+in Section 3.5 of [cite:@hodel2013introduction] we have that
 $J$ satisfies the Deduction theorem. A proof of the above is
 shown in the next theorem:
 
-Theorem:
+Theorem 1:
 #+begin_theorem
 <<theorem1>> (Deduction theoreom for $J$) 
   If $\Gamma \cup \{ A \} \vdash_J B$, then 
@@ -62,7 +62,7 @@ to prove $\Gamma \vdash_J A \rightarrow B$. There are three cases:
   we have that $\Gamma \vdash_J (A \rightarrow (C \rightarrow B)) \rightarrow ((A \rightarrow B) \rightarrow (A \rightarrow C))$. A double application of Modus Ponens, we obtain $\Gamma \vdash_J A \rightarrow C$.
 #+end_proof
 
-Theorem:
+Theorem 2:
 #+begin_theorem
 $\neg A \lor A$ and $\neg \neg A \rightarrow A$ are not
 theorems of $J$.
@@ -102,7 +102,7 @@ length of the proof:
       - Subcase 4. $\phi(A) < \phi(B)$ and $\phi(A) < \phi(C)$: To prove that $\phi(B) \geq \phi(C)$. Suppose by contradiction that $\phi(B) < \phi(C)$, thus $\phi(B \rightarrow C) = \phi(C)$. Since $\phi(A) \geq \phi(B \rightarrow C)$ we have that $\phi(A) \geq \phi(C)$. Since $\phi(C) > \phi(A) \geq \phi(C)$ we reach a contradiction.
     - Case 2. $\phi(A) < \phi(B \rightarrow C)$. The latter implies that $\phi(A \rightarrow (B \rightarrow C)) = \phi(B \rightarrow C)$. Hence, it is enough to prove that $\phi(B \rightarrow C) \geq \phi((A \rightarrow B) \rightarrow (A \rightarrow C))$.
       - Subcase 1. $\phi(B) \geq \phi(C)$: From the latter we have that $\phi(B \rightarrow C) = 0$. Hence, $\phi(A) < 0$, but $\phi(A) \geq 0$, a contradiction.
-      - Subcase 2. $\phi(B) < \phi(C)$: It is enough to prove that $\phi(C) \geq \phi((A \rightarrow B) \rightarrow (A \rightarrow C))$. Since $\phi(B) < \phi(C)$ we have that $\phi(B \rightarrow C) = \phi(C)$. Since $\phi(A) < \phi(B \rightarrow C)$ we can conclude that hence $\phi(C) > \phi(A)$. Let us prove the following observation \label{observation}: For any two formulas $A, B \in FOR(\neg, \land, \lor, \rightarrow)$, we have that $\phi(A) \geq \phi(B \rightarrow A)$. This happens because $\phi(A) \geq 0$ and $\phi(A) \geq 0$ and by definition of we have that $\phi(B \rightarrow A)$ is either $0$ or $\phi(A)$. From this observation we have that $\phi(A \rightarrow C) \leq \phi((A \rightarrow B) \rightarrow (A \rightarrow C))$. Since $\phi(A \rightarrow C) = \phi(C)$ we can conclude that $\phi(C) \geq \phi((A \rightarrow B) \rightarrow (A \rightarrow C))$.
+      - Subcase 2. $\phi(B) < \phi(C)$: It is enough to prove that $\phi(C) \geq \phi((A \rightarrow B) \rightarrow (A \rightarrow C))$. Since $\phi(B) < \phi(C)$ we have that $\phi(B \rightarrow C) = \phi(C)$. Since $\phi(A) < \phi(B \rightarrow C)$ we can conclude that hence $\phi(C) > \phi(A)$. Let us prove the following <<observation>>observation: For any two formulas $A, B \in FOR(\neg, \land, \lor, \rightarrow)$, we have that $\phi(A) \geq \phi(B \rightarrow A)$. This happens because $\phi(A) \geq 0$ and $\phi(A) \geq 0$ and by definition of we have that $\phi(B \rightarrow A)$ is either $0$ or $\phi(A)$. From this observation we have that $\phi(A \rightarrow C) \leq \phi((A \rightarrow B) \rightarrow (A \rightarrow C))$. Since $\phi(A \rightarrow C) = \phi(C)$ we can conclude that $\phi(C) \geq \phi((A \rightarrow B) \rightarrow (A \rightarrow C))$.
   - Case $J3$: This follows from $\max \{ \phi(A), \phi(B) \} \geq \phi(A)$.
   - Case $J4$: This follows from $\max \{ \phi(A), \phi(B) \} \geq \phi(B)$.
   - Case $J5$: We notice the following cases:
@@ -124,19 +124,19 @@ length of the proof:
         Since $\phi(A) \geq \phi(C)$ and $\phi(B) \geq \phi(C)$ then $\phi(A \lor B) = \min \{ \phi(A), \phi(B) \} \geq \phi(C)$.
       - Subcase 2. $\phi(B) < \phi(C)$. Since $\phi(A) \geq \phi(C) > \phi(B)$ we conclude that
         $\phi(A \lor B) = \phi(B)$. Because $\phi(B) < \phi(C)$, we have that
-        $\phi(B \rightarrow C) = \phi(C)$. Using the previous observation \ref{observation} we have that
+        $\phi(B \rightarrow C) = \phi(C)$. Using the previous [[observation][observation]], we have that
         $\phi(C) \geq \phi((A \lor B) \rightarrow C)$, thus $\phi(B \rightarrow C) \geq \phi((A \lor B) \rightarrow C)$.
 
-    - Case 2. $\phi(A) < \phi(B \rightarrow C)$. We will prove the following observation \label{observation2}: $\phi((A \land B) \rightarrow C) = \phi(A \rightarrow (B \rightarrow C))$.
+    - Case 2. $\phi(A) < \phi(B \rightarrow C)$. We will prove the following observation <<observation2>>observation: $\phi((A \land B) \rightarrow C) = \phi(A \rightarrow (B \rightarrow C))$.
 
       - Subcase 1. $\phi(A) \geq \phi(B \rightarrow C)$: This means that $\phi(A \rightarrow (B \rightarrow C)) = 0$, hence we need to prove that $\phi((A \land B) \rightarrow C) = 0$. We can see that $\phi(A \rightarrow (B \rightarrow C)) = 0$ implies that $\phi(A) \geq \phi(B \rightarrow C)$, which means that if $\phi(B) < \phi(C)$ we have that $\phi(A) \geq \phi(B \rightarrow C) = \phi(C)$. Suppose by contradiction that $\phi((A \land B) \rightarrow C) \neq 0$, so $\phi(A \land B) < \phi(C) \neq 0$. Thus, $\phi(C) > \phi(A)$ and $\phi(C) > \phi(B)$. The latter entails $\phi(A) \geq \phi(C) > \phi(A)$, a contradiction.
       - Subase 2. $\phi(A) < \phi(B \rightarrow C)$: This implies that $\phi(A \rightarrow (B \rightarrow C)) = \phi(B \rightarrow C)$. So we need to prove that $\phi((A \land B) \rightarrow C) = \phi(B \rightarrow C)$. We notice that $\phi(B) < \phi(C)$, otherwise $\phi(B \rightarrow C) = 0$ so $\phi(A) < 0$, a contradiction. From this, we conclude that $\phi(B \rightarrow C) = \phi(C)$, which reduces proving $\phi(A \rightarrow (B \rightarrow C)) = \phi(B \rightarrow C)$ to prove $\phi(A \rightarrow (B \rightarrow C)) = \phi(C)$ instead. Since $\phi(A) < \phi(B \rightarrow C) = \phi(C)$, we have that $\phi(C) > \max \{\phi(A), \phi(B) \}$. Therefore, $\phi((A \land B) \rightarrow C) = \phi(C)$ as desired.
 
 Returning to our original problem, we have that $\phi(A) < \phi(B \rightarrow C)$, hence
 it is enough to prove $\phi(A) \geq \phi((B \rightarrow C) \rightarrow ((A \lor B) \rightarrow C))$.
-From our previous observation \ref{observation2}, we notive that
+From our previous [[observation2][observation]], we notive that
 $\phi(A) \geq \phi(((B \rightarrow C) \land (A \lor B)) \rightarrow C)$, so by 
-our first observation \ref{observation}
+our first observation [[observation][observation]]
 the latter is true.
 
   - Case $J9$: To prove $\phi((A \rightarrow B) \rightarrow ((A \rightarrow \neg B) \rightarrow \neg A)) = 0$, i.e $\phi(A \rightarrow B) \geq \phi((A \rightarrow \neg B) \rightarrow \neg A)$.
@@ -201,7 +201,7 @@ formal system. However, this truth assignment does not constitute a semantics
 for the system $J$. In fact, there are no finite smeantics
 for intuitionistic logic as we will observe with the following theorem:
 
-Lemma:
+Lemma 1: 
 #+begin_lemma
 <<wow>>
 For $n \geq 2$, let $D_n$ denote the formula:
@@ -216,9 +216,9 @@ We have that $\not \vdash_J D_n$.
 
 Proof:
 #+begin_proof
-We use the $n+1$-valued logic previously defined in theorem \ref{theorem1}.
+We use the $n+1$-valued logic previously defined in theorem [[theorem1][Theorem 1]].
 We notice that $\phi(D_n) = \min_{1 \leq i<j \leq n} \{ \phi(p_i \leftrightarrow p_j) \}$.
-Let us suppose by contradiction that $\vdash_J D_n$. Thus, by theorem \ref{theorem1}
+Let us suppose by contradiction that $\vdash_J D_n$. Thus, by theorem [[theorem1][Theorem 1]]
 we have that $\phi(D_n) = 0$, so there are $1 \leq i<j \leq n$ such
 that $\phi(p_i \leftrightarrow p_j) = 0$. Since $p_i \leftrightarrow p_j$ stands for
 $(p_i \rightarrow p_j) \land (p_i \rightarrow p_j)$ we have that
@@ -252,7 +252,7 @@ Proof:
 #+begin_proof
 Let us assume by contradiction that such matrix $M$ exists with
 $n$ elements. We realize that $D_{n+1}$ is not a theorem of $J$
-from lemma \ref{wow}, so there is a truth assignment $\phi$
+from [[wow][Lemma 1]], so there is a truth assignment $\phi$
 for $M$ such that $\phi(D_{n+1}) \not \in S_0$. By the pigeonhole
 principle, there are $1 \leq j < k \leq n+1$ such that 
 $\phi(p_i) = \phi(p_k)$, i.e. more propositional variables than

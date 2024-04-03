@@ -80,7 +80,7 @@ The latter will fork the content of the theme from Netlify. The latter will crea
 
 <a id="figure--fig:academic-theme-content"></a>
 
-{{< figure src="/ox-hugo/academic_theme_content.png" caption="<span class=\"figure-number\">Figure 1: </span>If you chose the default name, the following repo should appear in your account" >}}
+{{< figure src="/home/jose/Documents/GithubProjects/starter-hugo-academic/content-org/first_post/academic_theme_content.png" caption="<span class=\"figure-number\">Figure 1: </span>If you chose the default name, the following repo should appear in your account" >}}
 
 
 ### [Ox-hugo](https://ox-hugo.scripter.co) (optional) {#ox-hugo--optional}

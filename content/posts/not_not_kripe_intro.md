@@ -16,7 +16,7 @@ logic (like the excludded middle principle) are discussed using this approach.
 ## Introduction {#introduction}
 
 With the discovery of non-Euclidean geometries
-in the middle of the nineteenth century \cite{Trudeau2001},
+in the middle of the nineteenth century (Trudeau, Richard J., 2001),
 mathematicians questioned
 the logical foundations of mathematics.
 In fact, the latter culminated in the
@@ -53,7 +53,7 @@ framework to understand the consistency
 of mathematics, a program heavely supported
 by the mathematician David Hilbert at the beginning of
 the 20th century.
-It was not until logician Kurt G\\"odel with his
+It was not until logician Kurt Gödel with his
 Incompleteness Theorems that showed the limitations
 of this program.
 
@@ -70,8 +70,8 @@ The crucial missing part was the lack of
 involvement of the knowledge-subject.
 The thinking activity is of huge
 importance for him. Such activity grounds
-on our \emph{Ur-intuition} of the flow
-of time \cite{https://doi.org/10.1002/sdr.462}.
+on our **Ur-intuition** of the flow
+of time (Richardson, George P., 2011).
 Thus, mathematical work accounts to \`mental
 constructions' in the intuitionistic sense.
 
@@ -88,7 +88,7 @@ position of not having a proof of it.
 A typical example in intuitionistic mathematics
 is to discuss the excludded middle principle
 \\(\neg A \lor A\\).
-Such statement \emph{cannot be accepted}
+Such statement **cannot be accepted**
 intuitioniscally since it contributes more
 to an undecided moment rather
 than knowledge about the statement.
@@ -99,7 +99,7 @@ us to understand intuitionistic ideas.
 
 ## A formal system \\(J\\) for propositional intuitionistic logic {#a-formal-system-j-for-propositional-intuitionistic-logic}
 
-The following axioms were extract from \cite{hodel2013introduction}:
+The following axioms were extract from (Hodel, R.E., 2013):
 
 -   **Language**: The symbols of the language are:
     -   \\(p\_1, p\_2, p\_3, \dots\\): An infinite list of propositional variables
@@ -124,11 +124,11 @@ as \\((A \rightarrow B) \land (B \rightarrow A)\\). It is important to mention t
 share similar abbreviations as in the classical counterpart.
 Since \\(J\\) as a formal system contains \\(J1\\) and Modus
 Ponens as unique rule of inference, by the comment on Theorem 3
-in Section 3.5 of \cite{hodel2013introduction} we have that
+in Section 3.5 of (Hodel, R.E., 2013) we have that
 \\(J\\) satisfies the Deduction theorem. A proof of the above is
 shown in the next theorem:
 
-Theorem:
+Theorem 1:
 
 <div class="theorem">
 
@@ -167,7 +167,7 @@ to prove \\(\Gamma \vdash\_J A \rightarrow B\\). There are three cases:
 
 </div>
 
-Theorem:
+Theorem 2:
 
 <div class="theorem">
 
@@ -212,7 +212,7 @@ length of the proof:
             -   Subcase 4. \\(\phi(A) < \phi(B)\\) and \\(\phi(A) < \phi( C)\\): To prove that \\(\phi(B) \geq \phi( C)\\). Suppose by contradiction that \\(\phi(B) < \phi( C)\\), thus \\(\phi(B \rightarrow C) = \phi( C)\\). Since \\(\phi(A) \geq \phi(B \rightarrow C)\\) we have that \\(\phi(A) \geq \phi( C)\\). Since \\(\phi( C) > \phi(A) \geq \phi( C)\\) we reach a contradiction.
         -   Case 2. \\(\phi(A) < \phi(B \rightarrow C)\\). The latter implies that \\(\phi(A \rightarrow (B \rightarrow C)) = \phi(B \rightarrow C)\\). Hence, it is enough to prove that \\(\phi(B \rightarrow C) \geq \phi((A \rightarrow B) \rightarrow (A \rightarrow C))\\).
             -   Subcase 1. \\(\phi(B) \geq \phi( C)\\): From the latter we have that \\(\phi(B \rightarrow C) = 0\\). Hence, \\(\phi(A) < 0\\), but \\(\phi(A) \geq 0\\), a contradiction.
-            -   Subcase 2. \\(\phi(B) < \phi( C)\\): It is enough to prove that \\(\phi( C) \geq \phi((A \rightarrow B) \rightarrow (A \rightarrow C))\\). Since \\(\phi(B) < \phi( C)\\) we have that \\(\phi(B \rightarrow C) = \phi( C)\\). Since \\(\phi(A) < \phi(B \rightarrow C)\\) we can conclude that hence \\(\phi( C) > \phi(A)\\). Let us prove the following observation \label{observation}: For any two formulas \\(A, B \in FOR(\neg, \land, \lor, \rightarrow)\\), we have that \\(\phi(A) \geq \phi(B \rightarrow A)\\). This happens because \\(\phi(A) \geq 0\\) and \\(\phi(A) \geq 0\\) and by definition of we have that \\(\phi(B \rightarrow A)\\) is either \\(0\\) or \\(\phi(A)\\). From this observation we have that \\(\phi(A \rightarrow C) \leq \phi((A \rightarrow B) \rightarrow (A \rightarrow C))\\). Since \\(\phi(A \rightarrow C) = \phi( C)\\) we can conclude that \\(\phi( C) \geq \phi((A \rightarrow B) \rightarrow (A \rightarrow C))\\).
+            -   Subcase 2. \\(\phi(B) < \phi( C)\\): It is enough to prove that \\(\phi( C) \geq \phi((A \rightarrow B) \rightarrow (A \rightarrow C))\\). Since \\(\phi(B) < \phi( C)\\) we have that \\(\phi(B \rightarrow C) = \phi( C)\\). Since \\(\phi(A) < \phi(B \rightarrow C)\\) we can conclude that hence \\(\phi( C) > \phi(A)\\). Let us prove the following <span class="org-target" id="org-target--observation"></span>observation: For any two formulas \\(A, B \in FOR(\neg, \land, \lor, \rightarrow)\\), we have that \\(\phi(A) \geq \phi(B \rightarrow A)\\). This happens because \\(\phi(A) \geq 0\\) and \\(\phi(A) \geq 0\\) and by definition of we have that \\(\phi(B \rightarrow A)\\) is either \\(0\\) or \\(\phi(A)\\). From this observation we have that \\(\phi(A \rightarrow C) \leq \phi((A \rightarrow B) \rightarrow (A \rightarrow C))\\). Since \\(\phi(A \rightarrow C) = \phi( C)\\) we can conclude that \\(\phi( C) \geq \phi((A \rightarrow B) \rightarrow (A \rightarrow C))\\).
     -   Case \\(J3\\): This follows from \\(\max \\{ \phi(A), \phi(B) \\} \geq \phi(A)\\).
     -   Case \\(J4\\): This follows from \\(\max \\{ \phi(A), \phi(B) \\} \geq \phi(B)\\).
     -   Case \\(J5\\): We notice the following cases:
@@ -240,18 +240,18 @@ length of the proof:
                 Since \\(\phi(A) \geq \phi( C)\\) and \\(\phi(B) \geq \phi( C)\\) then \\(\phi(A \lor B) = \min \\{ \phi(A), \phi(B) \\} \geq \phi( C)\\).
             -   Subcase 2. \\(\phi(B) < \phi( C)\\). Since \\(\phi(A) \geq \phi( C) > \phi(B)\\) we conclude that
                 \\(\phi(A \lor B) = \phi(B)\\). Because \\(\phi(B) < \phi( C)\\), we have that
-                \\(\phi(B \rightarrow C) = \phi( C)\\). Using the previous observation \ref{observation} we have that
+                \\(\phi(B \rightarrow C) = \phi( C)\\). Using the previous [observation](#org-target--observation), we have that
                 \\(\phi( C) \geq \phi((A \lor B) \rightarrow C)\\), thus \\(\phi(B \rightarrow C) \geq \phi((A \lor B) \rightarrow C)\\).
 
-        -   Case 2. \\(\phi(A) < \phi(B \rightarrow C)\\). We will prove the following observation \label{observation2}: \\(\phi((A \land B) \rightarrow C) = \phi(A \rightarrow (B \rightarrow C))\\).
+        -   Case 2. \\(\phi(A) < \phi(B \rightarrow C)\\). We will prove the following observation <span class="org-target" id="org-target--observation2"></span>observation: \\(\phi((A \land B) \rightarrow C) = \phi(A \rightarrow (B \rightarrow C))\\).
             -   Subcase 1. \\(\phi(A) \geq \phi(B \rightarrow C)\\): This means that \\(\phi(A \rightarrow (B \rightarrow C)) = 0\\), hence we need to prove that \\(\phi((A \land B) \rightarrow C) = 0\\). We can see that \\(\phi(A \rightarrow (B \rightarrow C)) = 0\\) implies that \\(\phi(A) \geq \phi(B \rightarrow C)\\), which means that if \\(\phi(B) < \phi( C)\\) we have that \\(\phi(A) \geq \phi(B \rightarrow C) = \phi( C)\\). Suppose by contradiction that \\(\phi((A \land B) \rightarrow C) \neq 0\\), so \\(\phi(A \land B) < \phi( C) \neq 0\\). Thus, \\(\phi( C) > \phi(A)\\) and \\(\phi( C) > \phi(B)\\). The latter entails \\(\phi(A) \geq \phi( C) > \phi(A)\\), a contradiction.
             -   Subase 2. \\(\phi(A) < \phi(B \rightarrow C)\\): This implies that \\(\phi(A \rightarrow (B \rightarrow C)) = \phi(B \rightarrow C)\\). So we need to prove that \\(\phi((A \land B) \rightarrow C) = \phi(B \rightarrow C)\\). We notice that \\(\phi(B) < \phi( C)\\), otherwise \\(\phi(B \rightarrow C) = 0\\) so \\(\phi(A) < 0\\), a contradiction. From this, we conclude that \\(\phi(B \rightarrow C) = \phi( C)\\), which reduces proving \\(\phi(A \rightarrow (B \rightarrow C)) = \phi(B \rightarrow C)\\) to prove \\(\phi(A \rightarrow (B \rightarrow C)) = \phi( C)\\) instead. Since \\(\phi(A) < \phi(B \rightarrow C) = \phi( C)\\), we have that \\(\phi( C) > \max \\{\phi(A), \phi(B) \\}\\). Therefore, \\(\phi((A \land B) \rightarrow C) = \phi( C)\\) as desired.
 
 Returning to our original problem, we have that \\(\phi(A) < \phi(B \rightarrow C)\\), hence
 it is enough to prove \\(\phi(A) \geq \phi((B \rightarrow C) \rightarrow ((A \lor B) \rightarrow C))\\).
-From our previous observation \ref{observation2}, we notive that
+From our previous [observation](#org-target--observation2), we notive that
 \\(\phi(A) \geq \phi(((B \rightarrow C) \land (A \lor B)) \rightarrow C)\\), so by
-our first observation \ref{observation}
+our first observation [observation](#org-target--observation)
 the latter is true.
 
 -   Case \\(J9\\): To prove \\(\phi((A \rightarrow B) \rightarrow ((A \rightarrow \neg B) \rightarrow \neg A)) = 0\\), i.e \\(\phi(A \rightarrow B) \geq \phi((A \rightarrow \neg B) \rightarrow \neg A)\\).
@@ -326,7 +326,7 @@ formal system. However, this truth assignment does not constitute a semantics
 for the system \\(J\\). In fact, there are no finite smeantics
 for intuitionistic logic as we will observe with the following theorem:
 
-Lemma:
+Lemma 1:
 
 <div class="lemma">
 
@@ -345,9 +345,9 @@ Proof:
 
 <div class="proof">
 
-We use the $n+1$-valued logic previously defined in theorem \ref{theorem1}.
+We use the $n+1$-valued logic previously defined in theorem [Theorem 1](#org-target--theorem1).
 We notice that \\(\phi(D\_n) = \min\_{1 \leq i<j \leq n} \\{ \phi(p\_i \leftrightarrow p\_j) \\}\\).
-Let us suppose by contradiction that \\(\vdash\_J D\_n\\). Thus, by theorem \ref{theorem1}
+Let us suppose by contradiction that \\(\vdash\_J D\_n\\). Thus, by theorem [Theorem 1](#org-target--theorem1)
 we have that \\(\phi(D\_n) = 0\\), so there are \\(1 \leq i<j \leq n\\) such
 that \\(\phi(p\_i \leftrightarrow p\_j) = 0\\). Since \\(p\_i \leftrightarrow p\_j\\) stands for
 \\((p\_i \rightarrow p\_j) \land (p\_i \rightarrow p\_j)\\) we have that
@@ -387,7 +387,7 @@ Proof:
 
 Let us assume by contradiction that such matrix \\(M\\) exists with
 \\(n\\) elements. We realize that \\(D\_{n+1}\\) is not a theorem of \\(J\\)
-from lemma \ref{wow}, so there is a truth assignment \\(\phi\\)
+from [Lemma 1](#org-target--wow), so there is a truth assignment \\(\phi\\)
 for \\(M\\) such that \\(\phi(D\_{n+1}) \not \in S\_0\\). By the pigeonhole
 principle, there are \\(1 \leq j < k \leq n+1\\) such that
 \\(\phi(p\_i) = \phi(p\_k)\\), i.e. more propositional variables than
@@ -422,7 +422,7 @@ Definition:
 
 <div class="definition">
 
-\cite{vanDalen2013}
+(Dirk van Dalen, 2013)
 A **Kripke model** is a tuple \\(\mathcal{K} = \langle K, \Sigma \rangle\\) such that
 \\(K\\) ia a non-empty partially ordered set, \\(\Sigma : K \rightarrow 2^{PROP}\\) is a function on \\(K\\)
 that assigns a collection of propositional
@@ -444,7 +444,7 @@ at each time. The function \\(\Sigma\\) tells us
 which atoms are \`true' in each state \\(k \in K\\).
 We can extend \\(\Sigma\\) to all formulas.
 
-Lemma:
+Lemma 2:
 
 <div class="lemma">
 
@@ -469,7 +469,7 @@ The negation connective here is abbreviated as \\(\neg A := A \rightarrow \bot\\
 We write \\(k \models \phi\\) for \\(\phi \in \Sigma(k)\\), pronouncing it as
 \\(k\\) forces \\(\phi\\).
 
-Lemma:
+Lemma 3:
 
 <div class="lemma">
 
@@ -505,3 +505,13 @@ Since \\(p \geq k\\), \\(p \models \phi\_2\\). Hence, \\(l \models \phi\_1 \righ
 The last lemma captures the idea that knowlege is preserved
 \`over time' of the knowlege-subject and as such it can only
 be incremented.
+
+## References
+
+Dirk van Dalen (2013). _Logic and Structure_, Springer London.
+
+Hodel, R.E. (2013). _An Introduction to Mathematical Logic_, Dover Publications, Incorporated.
+
+Richardson, George P. (2011). _Reflections on the foundations of system dynamics_, System Dynamics Review.
+
+Trudeau, Richard J. (2001). _The Possibility of Non-Euclidean Geometry_, Birkhäuser Boston.

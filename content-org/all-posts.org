@@ -6,6 +6,7 @@
 #+latex_header: \newtheorem{theorem}{Theorem}
 #+latex_header: \newtheorem{definition}{Definition}
 #+latex_header: \usepackage{ebproof}
+#+bibliography: references.bib
 * Posts
 :PROPERTIES:
 :EXPORT_HUGO_SECTION: posts
@@ -46,6 +47,7 @@ The first time I saw the following exercise was in [[https://www.youtube.com/wat
 #+INCLUDE: "./not_not_introduction_intuitionistic_prop_logic/introduction.org"
 #+INCLUDE: "./not_not_introduction_intuitionistic_prop_logic/prekripke.org"
 #+INCLUDE: "./not_not_introduction_intuitionistic_prop_logic/kripke.org"
+#+print_bibliography:
 ** My first post: how to make posts and academic websites using Hugo with the academic theme
 :PROPERTIES:
 :EXPORT_FILE_NAME: first_post
@@ -59,7 +61,6 @@ Most of the help I got comes from [[http://www.statslab.cam.ac.uk/~qz280/post/mi
 #+INCLUDE: "./first_post/tools.org"
 #+INCLUDE: "./first_post/basic-editing.org"
 #+INCLUDE: "./first_post/workflow.org"
-
 ** Migrating my website to Hugo + Academic + ox-hugo               :Workflow:
 :PROPERTIES:
 :EXPORT_FILE_NAME: migrating

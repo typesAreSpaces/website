@@ -6,7 +6,7 @@ title: Jose Abel Castellanos Joo
 superuser: true
 
 # Role/position/tagline
-role: Ph.D. student
+role: Ph.D. candidate
 
 # Organizations/Affiliations to show in About widget
 organizations:
@@ -109,7 +109,7 @@ email: 'jabelcastellanosjoo@unm.edu'
 highlight_name: true
 ---
 
-I'm a Ph.D. student at the <a href="https://www.unm.edu/">University of New Mexico</a> 
+I'm a Ph.D. candidate at the <a href="https://www.unm.edu/">University of New Mexico</a> 
 in the <a href="https://www.cs.unm.edu/">Computer Science Department</a> advised by 
 <a href="https://www.cs.unm.edu/~kapur/">Prof. Deepak Kapur</a> working on formal methods
 and computer algebra.  I'm interested in software verification, programming languages,
