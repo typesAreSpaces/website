@@ -251,7 +251,7 @@ Returning to our original problem, we have that \\(\phi(A) < \phi(B \rightarrow 
 it is enough to prove \\(\phi(A) \geq \phi((B \rightarrow C) \rightarrow ((A \lor B) \rightarrow C))\\).
 From our previous [observation](#org-target--observation2), we notive that
 \\(\phi(A) \geq \phi(((B \rightarrow C) \land (A \lor B)) \rightarrow C)\\), so by
-our first observation [observation](#org-target--observation)
+our first [observation](#org-target--observation)
 the latter is true.
 
 -   Case \\(J9\\): To prove \\(\phi((A \rightarrow B) \rightarrow ((A \rightarrow \neg B) \rightarrow \neg A)) = 0\\), i.e \\(\phi(A \rightarrow B) \geq \phi((A \rightarrow \neg B) \rightarrow \neg A)\\).
